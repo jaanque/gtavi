@@ -32,7 +32,7 @@ export default async function Home() {
         >
           {/* Left Ad Banner */}
           <div className="order-2 lg:order-1">
-            <AdBanner bannerKey="left-banner" adKey="79fce5ea83b8ef210e7c4000c6597a03" />
+            <AdBanner bannerKey="left-banner" />
           </div>
 
           {/* Center Content */}
@@ -56,7 +56,7 @@ export default async function Home() {
 
           {/* Right Ad Banner */}
           <div className="order-3">
-            <AdBanner bannerKey="right-banner" adKey="79fce5ea83b8ef210e7c4000c6597a04" />
+            <AdBanner bannerKey="right-banner" />
           </div>
         </div>
       </main>

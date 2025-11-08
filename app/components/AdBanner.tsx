@@ -4,10 +4,9 @@ import { useEffect, useRef } from 'react'
 
 interface AdBannerProps {
   bannerKey: string;
-  adKey: string;
 }
 
-const AdBanner = ({ bannerKey, adKey }: AdBannerProps) => {
+const AdBanner = ({ bannerKey }: AdBannerProps) => {
   const bannerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -15,16 +14,16 @@ const AdBanner = ({ bannerKey, adKey }: AdBannerProps) => {
     if (banner && banner.children.length === 0) {
       const configScript = document.createElement('script');
       configScript.type = 'text/javascript';
-      configScript.innerHTML = `atOptions = { 'key' : '${adKey}', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };`;
+      configScript.innerHTML = `atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };`;
 
       const adScript = document.createElement('script');
       adScript.type = 'text/javascript';
-      adScript.src = `//engagementlawfully.com/${adKey}/invoke.js`;
+      adScript.src = `//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js?cb=${Math.random()}`;
 
       banner.appendChild(configScript);
       banner.appendChild(adScript);
     }
-  }, [bannerKey, adKey])
+  }, [bannerKey])
 
   return <div ref={bannerRef} className="ad-banner-container" id={`ad-banner-${bannerKey}`}></div>
 }
