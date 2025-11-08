@@ -7,17 +7,16 @@ const AdBanner = () => {
 
   useEffect(() => {
     if (bannerRef.current && bannerRef.current.children.length === 0) {
-      const script = document.createElement('script')
-      script.async = true
-      script.setAttribute('data-cfasync', 'false')
-      script.src =
-        '//pl23333333.highcpmgate.com/8f94503931cf23631933405763953f27/invoke.js'
+      const configScript = document.createElement('script')
+      configScript.type = 'text/javascript'
+      configScript.innerHTML = `atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };`
+      bannerRef.current.appendChild(configScript)
 
-      const container = document.createElement('div')
-      container.id = 'container-8f94503931cf23631933405763953f27'
-
-      bannerRef.current.appendChild(container)
-      bannerRef.current.appendChild(script)
+      const adScript = document.createElement('script')
+      adScript.type = 'text/javascript'
+      adScript.src =
+        '//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js'
+      bannerRef.current.appendChild(adScript)
     }
   }, [])
 
