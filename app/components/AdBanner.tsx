@@ -12,16 +12,29 @@ const AdBanner = ({ bannerKey }: AdBannerProps) => {
   useEffect(() => {
     const banner = bannerRef.current;
     if (banner && banner.children.length === 0) {
-      const configScript = document.createElement('script');
-      configScript.type = 'text/javascript';
-      configScript.innerHTML = `atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };`;
+      const iframe = document.createElement('iframe');
+      iframe.width = '160';
+      iframe.height = '600';
+      iframe.frameBorder = '0';
+      iframe.scrolling = 'no';
+      banner.appendChild(iframe);
 
-      const adScript = document.createElement('script');
-      adScript.type = 'text/javascript';
-      adScript.src = `//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js?cb=${Math.random()}`;
-
-      banner.appendChild(configScript);
-      banner.appendChild(adScript);
+      const iframeDoc = iframe.contentWindow?.document;
+      if (iframeDoc) {
+        iframeDoc.open();
+        iframeDoc.write(`
+          <html>
+            <head>
+              <script type="text/javascript">
+                atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+              </script>
+              <script type="text/javascript" src="//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js"></script>
+            </head>
+            <body></body>
+          </html>
+        `);
+        iframeDoc.close();
+      }
     }
   }, [bannerKey])
 
