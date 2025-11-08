@@ -25,7 +25,7 @@ export default async function Home() {
   const targetDate = await getTargetDate()
 
   return (
-    (<div className="flex min-h-screen flex-col items-center justify-center font-gta">
+    (<div className="flex min-h-screen flex-col items-center justify-center">
       <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
