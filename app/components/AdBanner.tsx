@@ -17,24 +17,21 @@ const AdBanner = ({ bannerKey }: AdBannerProps) => {
       iframe.height = '600';
       iframe.frameBorder = '0';
       iframe.scrolling = 'no';
-      banner.appendChild(iframe);
 
-      const iframeDoc = iframe.contentWindow?.document;
-      if (iframeDoc) {
-        iframeDoc.open();
-        iframeDoc.write(`
-          <html>
-            <head>
-              <script type="text/javascript">
-                atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
-              </script>
-              <script type="text/javascript" src="//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js"></script>
-            </head>
-            <body></body>
-          </html>
-        `);
-        iframeDoc.close();
-      }
+      const iframeContent = `
+        <html>
+          <head>
+            <script type="text/javascript">
+              atOptions = { 'key' : '79fce5ea83b8ef210e7c4000c6597a03', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+            <\/script>
+            <script type="text/javascript" src="//engagementlawfully.com/79fce5ea83b8ef210e7c4000c6597a03/invoke.js"><\/script>
+          </head>
+          <body></body>
+        </html>
+      `;
+
+      iframe.srcdoc = iframeContent;
+      banner.appendChild(iframe);
     }
   }, [bannerKey])
 
