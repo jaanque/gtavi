@@ -7,43 +7,59 @@ interface CountdownProps {
   targetDate: string;
 }
 
+interface TimeLeft {
+  days?: number;
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
+}
+
 const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
-  const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({});
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setIsClient(true);
+
+    const calculateTimeLeft = () => {
+      const difference = +new Date(targetDate) - +new Date();
+      let newTimeLeft: TimeLeft = {};
+
+      if (difference > 0) {
+        newTimeLeft = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      }
+      return newTimeLeft;
+    };
+
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  if (!isClient) {
+    return null; // Or a loading spinner
+  }
 
   const timerComponents: ReactElement[] = [];
 
   Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval as keyof typeof timeLeft]) {
+    const timeValue = timeLeft[interval as keyof typeof timeLeft];
+    if (timeValue === undefined) {
       return;
     }
 
     timerComponents.push(
       <div key={interval} className="flex flex-col items-center mx-2">
-        <span className="text-4xl font-bold">{timeLeft[interval as keyof typeof timeLeft]}</span>
+        <span className="text-4xl font-bold">{timeValue}</span>
         <span className="text-sm uppercase">{interval}</span>
       </div>
     );
