@@ -59,8 +59,8 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
     timerComponents.push(
       <div key={interval} className="flex flex-col items-center mx-2">
-        <span className="text-4xl font-bold">{timeValue}</span>
-        <span className="text-sm uppercase">{interval}</span>
+        <span className="text-2xl sm:text-3xl md:text-4xl font-bold">{timeValue}</span>
+        <span className="text-xs sm:text-sm uppercase">{interval}</span>
       </div>
     );
   });

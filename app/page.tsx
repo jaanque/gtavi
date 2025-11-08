@@ -26,11 +26,11 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center font-gta">
       <main className="flex flex-grow flex-col items-center justify-center text-center p-4">
-        <h1 className="text-8xl font-bold mb-4 text-gta-pink" style={{ textShadow: '2px 2px 4px #000' }}>GTA VI</h1>
-        <p className="text-4xl mb-8 text-white" style={{ textShadow: '2px 2px 4px #000' }}>COUNTDOWN</p>
+        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink" style={{ textShadow: '2px 2px 4px #000' }}>GTA VI</h1>
+        <p className="text-3xl sm:text-4xl md:text-5xl mb-8 text-white" style={{ textShadow: '2px 2px 4px #000' }}>COUNTDOWN</p>
         <Countdown targetDate={targetDate} />
       </main>
-      <footer className="w-full p-4 text-center text-sm text-white">
+      <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
     </div>
