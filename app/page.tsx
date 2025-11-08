@@ -25,16 +25,20 @@ export default async function Home() {
   const targetDate = await getTargetDate()
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center font-gta">
+    (<div className="flex min-h-screen flex-col items-center justify-center font-gta">
       <main className="flex flex-grow items-center justify-center w-full p-4">
-        <div className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8">
+        <div
+          className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
+        >
           {/* Left Ad Banner */}
           <div className="order-2 lg:order-1">
-            <AdBanner />
+            <AdBanner key="left-banner" />
           </div>
 
           {/* Center Content */}
-          <div className="order-1 lg:order-2 flex flex-col items-center text-center">
+          <div
+            className="order-1 lg:order-2 flex flex-col items-center text-center"
+          >
             <h1
               className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink"
               style={{ textShadow: '2px 2px 4px #000' }}
@@ -52,13 +56,13 @@ export default async function Home() {
 
           {/* Right Ad Banner */}
           <div className="order-3">
-            <AdBanner />
+            <AdBanner key="right-banner" />
           </div>
         </div>
       </main>
       <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
-    </div>
-  )
+    </div>)
+  );
 }
