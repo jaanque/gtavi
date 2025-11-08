@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
+import AdBanner from './components/AdBanner'
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -29,6 +30,7 @@ export default async function Home() {
         <div
           className="flex flex-row items-center justify-around w-full space-x-8"
         >
+          <AdBanner adId="1" />
           {/* Center Content */}
           <div
             className="flex flex-col items-center text-center"
@@ -47,6 +49,7 @@ export default async function Home() {
             </p>
             <Countdown targetDate={targetDate} />
           </div>
+          <AdBanner adId="2" />
         </div>
       </main>
       <footer className="w-full p-2 text-center text-sm text-white">
