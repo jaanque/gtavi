@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
+import Script from 'next/script'
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -29,10 +30,25 @@ export default async function Home() {
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
+          {/* Ad Content */}
+          <div className="order-2 lg:order-1 flex flex-col items-center text-center">
+            <div className="mb-8">
+              <Script
+                type="text/javascript"
+                src="//www.highperformanceformat.com/91ffbae04bc1e27639900d17d6be98b4/invoke.js"
+                strategy="afterInteractive"
+              />
+            </div>
+            <div>
+              <Script
+                type="text/javascript"
+                src="//www.highperformanceformat.com/90f1d9e1f2eb5f8442de64c2a0bd80e9/invoke.js"
+                strategy="afterInteractive"
+              />
+            </div>
+          </div>
           {/* Center Content */}
-          <div
-            className="order-1 lg:order-2 flex flex-col items-center text-center"
-          >
+          <div className="flex-grow order-1 lg:order-2 flex flex-col items-center text-center">
             <h1
               className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink"
               style={{ textShadow: '2px 2px 4px #000' }}
