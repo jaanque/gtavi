@@ -33,10 +33,21 @@ const AdBanner = ({ adId }: AdBannerProps) => {
   if (adId === '2') {
     return (
       <div>
+        <Script id="ad-banner-2-options" strategy="lazyOnload">
+          {`
+            atOptions = {
+              'key' : 'e76e70afe16fb278b51cac1e43d1f1b0',
+              'format' : 'iframe',
+              'height' : 300,
+              'width' : 160,
+              'params' : {}
+            };
+          `}
+        </Script>
         <Script
           id="ad-banner-2-src"
           strategy="lazyOnload"
-          src="//engagementlawfully.com/e7/6e/70/e76e70afe16fb278b51cac1e43d1f1b0.js"
+          src="//engagementlawfully.com/e76e70afe16fb278b51cac1e43d1f1b0/invoke.js"
         />
       </div>
     )
