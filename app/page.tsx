@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
 import Script from 'next/script'
+import { Analytics } from "@vercel/analytics/next"
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -65,6 +66,9 @@ export default async function Home() {
         src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"
         strategy="afterInteractive"
       />
+
+      <Analytics/>
+
       <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
