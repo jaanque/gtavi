@@ -55,7 +55,7 @@ export default async function Home() {
           {/* Ad Content Right */}
           <div className="order-3 lg:order-3 flex flex-col items-center text-center">
             <div>
-              <iframe src="/ad2.html" width="160" height="300" frameBorder="0" scrolling="no"></iframe>
+              <iframe src="/ad2.html" width="160" height="600" frameBorder="0" scrolling="no"></iframe>
             </div>
           </div>
         </div>
