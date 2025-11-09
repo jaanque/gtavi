@@ -28,12 +28,16 @@ export default async function Home() {
     (<div className="flex min-h-screen flex-col items-center justify-center">
       <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
-          className="flex flex-row items-center justify-around w-full space-x-8"
+          className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
-          <AdBanner adId="1" />
+          {/* Left Ad Banner */}
+          <div className="order-2 lg:order-1">
+            <AdBanner bannerKey="left-banner" />
+          </div>
+
           {/* Center Content */}
           <div
-            className="flex flex-col items-center text-center"
+            className="order-1 lg:order-2 flex flex-col items-center text-center"
           >
             <h1
               className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink"
@@ -49,7 +53,11 @@ export default async function Home() {
             </p>
             <Countdown targetDate={targetDate} />
           </div>
-          <AdBanner adId="2" />
+
+          {/* Right Ad Banner */}
+          <div className="order-3">
+            <AdBanner bannerKey="right-banner" />
+          </div>
         </div>
       </main>
       <footer className="w-full p-2 text-center text-sm text-white">
