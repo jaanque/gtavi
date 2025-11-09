@@ -58,16 +58,21 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     }
 
     timerComponents.push(
-      <div key={interval} className="flex flex-col items-center mx-2">
-        <span className="text-2xl sm:text-3xl md:text-4xl font-bold">{timeValue}</span>
-        <span className="text-xs sm:text-sm uppercase">{interval}</span>
+      <div key={interval} className="flex flex-col items-center p-2 mx-2">
+        <span
+          className="font-gta text-5xl sm:text-6xl md:text-7xl text-white"
+          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}
+        >
+          {timeValue}
+        </span>
+        <span className="font-gta text-lg sm:text-xl uppercase text-gta-pink">{interval}</span>
       </div>
     );
   });
 
   return (
-    <div className="flex justify-center">
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+    <div className="flex justify-center mt-8 space-x-4">
+      {timerComponents.length ? timerComponents : <span className="font-gta text-4xl text-white">Time's up!</span>}
     </div>
   );
 };
