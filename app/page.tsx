@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
+import AdBanner from './AdBanner'
 import Script from 'next/script'
 
 // Revalidate the page every hour
@@ -33,40 +34,10 @@ export default async function Home() {
           {/* Ad Content */}
           <div className="order-2 lg:order-1 flex flex-col items-center text-center">
             <div className="mb-8">
-              <Script id="ad-script-1" strategy="afterInteractive">
-                {`
-                  atOptions = {
-                    'key' : '91ffbae04bc1e27639900d17d6be98b4',
-                    'format' : 'iframe',
-                    'height' : 600,
-                    'width' : 160,
-                    'params' : {}
-                  };
-                `}
-              </Script>
-              <Script
-                type="text/javascript"
-                src="//www.highperformanceformat.com/91ffbae04bc1e27639900d17d6be98b4/invoke.js"
-                strategy="afterInteractive"
-              />
+              <AdBanner adKey="91ffbae04bc1e27639900d17d6be98b4" width={160} height={600} />
             </div>
             <div>
-              <Script id="ad-script-2" strategy="afterInteractive">
-                {`
-                  atOptions = {
-                    'key' : '90f1d9e1f2eb5f8442de64c2a0bd80e9',
-                    'format' : 'iframe',
-                    'height' : 300,
-                    'width' : 160,
-                    'params' : {}
-                  };
-                `}
-              </Script>
-              <Script
-                type="text/javascript"
-                src="//www.highperformanceformat.com/90f1d9e1f2eb5f8442de64c2a0bd80e9/invoke.js"
-                strategy="afterInteractive"
-              />
+              <AdBanner adKey="90f1d9e1f2eb5f8442de64c2a0bd80e9" width={160} height={300} />
             </div>
           </div>
           {/* Center Content */}
@@ -87,6 +58,11 @@ export default async function Home() {
           </div>
         </div>
       </main>
+      <Script
+        type="text/javascript"
+        src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"
+        strategy="afterInteractive"
+      />
       <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
