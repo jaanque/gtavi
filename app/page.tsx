@@ -30,13 +30,10 @@ export default async function Home() {
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
-          {/* Ad Content */}
+          {/* Ad Content Left */}
           <div className="order-2 lg:order-1 flex flex-col items-center text-center">
             <div className="mb-8">
               <iframe src="/ad1.html" width="160" height="600" frameBorder="0" scrolling="no"></iframe>
-            </div>
-            <div>
-              <iframe src="/ad2.html" width="160" height="300" frameBorder="0" scrolling="no"></iframe>
             </div>
           </div>
           {/* Center Content */}
@@ -54,6 +51,12 @@ export default async function Home() {
               COUNTDOWN
             </p>
             <Countdown targetDate={targetDate} />
+          </div>
+          {/* Ad Content Right */}
+          <div className="order-3 lg:order-3 flex flex-col items-center text-center">
+            <div>
+              <iframe src="/ad2.html" width="160" height="300" frameBorder="0" scrolling="no"></iframe>
+            </div>
           </div>
         </div>
       </main>
