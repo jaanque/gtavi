@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
+import AdBanner from './components/AdBanner'
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -53,6 +54,7 @@ export default async function Home() {
       <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
+      <AdBanner />
     </div>)
   );
 }
