@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
 import AdBanner from './components/AdBanner'
+import LeftAdBanner from './components/LeftAdBanner'
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -30,6 +31,11 @@ export default async function Home() {
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
+          {/* Left Ad Banner */}
+          <div className="order-2 lg:order-1">
+            <LeftAdBanner />
+          </div>
+
           {/* Center Content */}
           <div
             className="order-1 lg:order-2 flex flex-col items-center text-center"
@@ -49,6 +55,8 @@ export default async function Home() {
             <Countdown targetDate={targetDate} />
           </div>
 
+          {/* Right Spacer */}
+          <div className="order-3 hidden lg:block" style={{ flexBasis: '160px' }}></div>
         </div>
       </main>
       <footer className="w-full p-2 text-center text-sm text-white">
