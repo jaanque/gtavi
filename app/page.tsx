@@ -32,7 +32,9 @@ export default async function Home() {
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
           {/* Left Ad Banner */}
-          <div className="order-2 lg:order-1">
+          <div
+            className="order-2 lg:order-1 hidden lg:flex lg:flex-col lg:items-center lg:justify-center"
+          >
             <LeftAdBanner />
           </div>
 
@@ -55,8 +57,12 @@ export default async function Home() {
             <Countdown targetDate={targetDate} />
           </div>
 
-          {/* Right Spacer */}
-          <div className="order-3 hidden lg:block" style={{ flexBasis: '160px' }}></div>
+          {/* Right Ad Banner */}
+          <div
+            className="order-3 hidden lg:flex lg:flex-col lg:items-center lg:justify-center"
+          >
+            <LeftAdBanner />
+          </div>
         </div>
       </main>
       <footer className="w-full p-2 text-center text-sm text-white">
