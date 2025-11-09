@@ -26,7 +26,7 @@ export default async function Home() {
 
   return (
     (<div className="flex min-h-screen flex-col items-center justify-center">
-      <main className="flex flex-grow items-center justify-center w-full p-12">
+      <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
         >
@@ -59,17 +59,15 @@ export default async function Home() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Content */}
-        <footer className="w-full text-center text-sm text-white">
-          <p>Developed with ♥ by Jan</p>
-          <Script
-            type="text/javascript"
-            src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"
-            strategy="afterInteractive"
-          />
-        </footer>
       </main>
-    </div>
+      <Script
+        type="text/javascript"
+        src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"
+        strategy="afterInteractive"
+      />
+      <footer className="w-full p-2 text-center text-sm text-white">
+        <p>Developed with ♥ by Jan</p>
+      </footer>
+    </div>)
   );
 }
