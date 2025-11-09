@@ -33,6 +33,17 @@ export default async function Home() {
           {/* Ad Content */}
           <div className="order-2 lg:order-1 flex flex-col items-center text-center">
             <div className="mb-8">
+              <Script id="ad-script-1" strategy="afterInteractive">
+                {`
+                  atOptions = {
+                    'key' : '91ffbae04bc1e27639900d17d6be98b4',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                `}
+              </Script>
               <Script
                 type="text/javascript"
                 src="//www.highperformanceformat.com/91ffbae04bc1e27639900d17d6be98b4/invoke.js"
@@ -40,6 +51,17 @@ export default async function Home() {
               />
             </div>
             <div>
+              <Script id="ad-script-2" strategy="afterInteractive">
+                {`
+                  atOptions = {
+                    'key' : '90f1d9e1f2eb5f8442de64c2a0bd80e9',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                `}
+              </Script>
               <Script
                 type="text/javascript"
                 src="//www.highperformanceformat.com/90f1d9e1f2eb5f8442de64c2a0bd80e9/invoke.js"
