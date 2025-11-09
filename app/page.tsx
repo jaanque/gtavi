@@ -63,6 +63,7 @@ export default async function Home() {
       <footer className="w-full p-2 text-center text-sm text-white">
         <p>Developed with ♥ by Jan</p>
       </footer>
+      <AdBanner bannerKey="social-bar" />
     </div>)
   );
 }
