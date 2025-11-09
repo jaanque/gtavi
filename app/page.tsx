@@ -1,6 +1,5 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
-import AdBanner from './AdBanner'
 import Script from 'next/script'
 
 // Revalidate the page every hour
@@ -34,10 +33,10 @@ export default async function Home() {
           {/* Ad Content */}
           <div className="order-2 lg:order-1 flex flex-col items-center text-center">
             <div className="mb-8">
-              <AdBanner adKey="91ffbae04bc1e27639900d17d6be98b4" width={160} height={600} />
+              <iframe src="/ad1.html" width="160" height="600" frameBorder="0" scrolling="no"></iframe>
             </div>
             <div>
-              <AdBanner adKey="90f1d9e1f2eb5f8442de64c2a0bd80e9" width={160} height={300} />
+              <iframe src="/ad2.html" width="160" height="300" frameBorder="0" scrolling="no"></iframe>
             </div>
           </div>
           {/* Center Content */}
