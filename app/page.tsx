@@ -60,6 +60,6 @@ export default async function Home() {
           />
         </footer>
       </main>
-    </div>)
+    </div>
   );
 }
