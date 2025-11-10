@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
+import Poll from './Poll'
 import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/next"
 
@@ -52,6 +53,7 @@ export default async function Home() {
               COUNTDOWN
             </p>
             <Countdown targetDate={targetDate} />
+            <Poll />
           </div>
           {/* Ad Content Right */}
           <div className="order-3 lg:order-3 flex flex-col items-center text-center">
