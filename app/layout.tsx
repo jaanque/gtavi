@@ -46,7 +46,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script type='text/javascript' src='//pl28021491.effectivegatecpm.com/e6/e8/5a/e6e85a1fbd479091b9b99f9494ca4201.js' />
         <Script async src="https://embed.reddit.com/widgets.js" charSet="UTF-8" />
       </head>
       <body>

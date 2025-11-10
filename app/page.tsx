@@ -88,13 +88,14 @@ export default async function Home() {
           src="//www.highperformanceformat.com/82c08ce9d0c2b20878a114ac44199f26/invoke.js"
           strategy="afterInteractive"
         />
-        <Script
+        <Script type='text/javascript' src='//pl28021491.effectivegatecpm.com/e6/e8/5a/e6e85a1fbd479091b9b99f9494ca4201.js' />
+      </div>
+      <Legacy />
+      <Script
         type="text/javascript"
         src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"
         strategy="afterInteractive"
       />
-      </div>
-      <Legacy />
 
       <Analytics/>
 
