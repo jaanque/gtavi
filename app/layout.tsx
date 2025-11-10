@@ -36,12 +36,6 @@ export const metadata: Metadata = {
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
     images: [`${DOMAIN}/twitter-image.jpg`],
   },
-  icons: {
-    icon: "/globe.svg",
-    shortcut: "/globe.svg",
-    apple: "/globe.svg",
-  },
-  manifest: "/manifest.json",
 }
 
 export default function RootLayout({
