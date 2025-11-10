@@ -10,10 +10,10 @@ const StructuredData = ({ targetDate }: { targetDate: string }) => {
     "endDate": targetDate,
     "location": {
       "@type": "VirtualLocation",
-      "url": "https://gta6countdown.com"
+      "url": "https://www.gta6drop.me/"
     },
     "image": [
-      "https://gta6countdown.com/og-image.jpg"
+      "https://www.gta6drop.me/og-image.jpg"
     ],
     "performer": {
       "@type": "PerformingGroup",
@@ -26,7 +26,7 @@ const StructuredData = ({ targetDate }: { targetDate: string }) => {
     "@type": "NewsArticle",
     "headline": "GTA 6: Latest News, Rumors, and Release Date Countdown",
     "image": [
-      "https://gta6countdown.com/og-image.jpg"
+      "https://www.gta6drop.me/og-image.jpg"
      ],
     "datePublished": "2024-01-01T08:00:00+08:00",
     "dateModified": new Date().toISOString(),

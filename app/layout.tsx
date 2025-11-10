@@ -10,10 +10,10 @@ export const metadata: Metadata = {
     title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
     type: 'website',
-    url: 'https://gta6countdown.com', // Placeholder URL
+    url: 'https://www.gta6drop.me/', // Placeholder URL
     images: [
       {
-        url: 'https://gta6countdown.com/og-image.jpg', // Placeholder image
+        url: 'https://www.gta6drop.me/og-image.jpg', // Placeholder image
         width: 1200,
         height: 630,
         alt: 'GTA 6 Logo with Countdown Timer',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
-    images: ['https://gta6countdown.com/twitter-image.jpg'], // Placeholder image
+    images: ['https://www.gta6drop.me/twitter-image.jpg'], // Placeholder image
   },
 }
 
