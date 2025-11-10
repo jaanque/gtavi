@@ -4,21 +4,18 @@ export default function Community() {
       <h2 className="text-4xl font-bold mb-8 text-gta-pink" style={{ textShadow: '2px 2px 4px #000' }}>
         Community
       </h2>
-      <div className="flex flex-col items-center gap-8">
-        <blockquote className="reddit-embed-bq" data-embed-height="500">
-          <a href="https://www.reddit.com/r/GTA6/comments/1155g7z/official_gta_6_release_day_delay_discussion_thread/">Official GTA 6 Release Day Delay Discussion Thread</a><br /> by
-          <a href="https://www.reddit.com/user/MegaGamer404/">u/MegaGamer404</a> in
-          <a href="https://www.reddit.com/r/GTA6/">r/GTA6</a>
-        </blockquote>
-        <blockquote className="reddit-embed-bq" data-embed-height="500">
-          <a href="https://www.reddit.com/r/GTA6/comments/z80j6f/gta_vi_trailer_2_analysis_document_available_now/">GTA VI - Trailer 2 Analysis Document - Available Now</a><br /> by
-          <a href="https://www.reddit.com/user/yanis-brbr/">u/yanis-brbr</a> in
-          <a href="https://www.reddit.com/r/GTA6/">r/GTA6</a>
-        </blockquote>
-        <blockquote className="reddit-embed-bq" data-embed-height="500">
-          <a href="https://www.reddit.com/r/GTA6/comments/1k2d6g3/same_energy/">Same energy</a><br /> by
-          <a href="https://www.reddit.com/user/MTH1138/">u/MTH1138</a> in
-          <a href="https://www.reddit.com/r/GTA6/">r/GTA6</a>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <blockquote
+          className="reddit-embed-bq"
+          style={{ height: '500px' }}
+          data-embed-height="739"
+        >
+          <a href="https://www.reddit.com/r/GTAIV/comments/1osk2tm/bro_said_one_last_puff/">
+            Bro said “one last puff”
+          </a>
+          <br /> by
+          <a href="https://www.reddit.com/user/FireVoid_1899/">u/FireVoid_1899</a> in
+          <a href="https://www.reddit.com/r/GTAIV/">GTAIV</a>
         </blockquote>
       </div>
     </section>
