@@ -1,10 +1,10 @@
 export default function Community() {
   return (
-    <section className="text-white text-center mt-12 w-full max-w-4xl px-4">
+    <section className="text-white text-center mt-12 w-full max-w-7xl px-4">
       <h2 className="text-4xl font-bold mb-8 text-gta-pink" style={{ textShadow: '2px 2px 4px #000' }}>
         Community
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
         <blockquote
           className="reddit-embed-bq"
           style={{ height: '500px' }}
