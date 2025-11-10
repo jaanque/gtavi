@@ -36,13 +36,13 @@ export default function Poll() {
         <div className="flex justify-center gap-4">
           <button
             onClick={() => handleVote('yes')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded"
+            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white"
           >
             Yes
           </button>
           <button
             onClick={() => handleVote('no')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded"
+            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white"
           >
             No
           </button>
