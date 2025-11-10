@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { supabase } from '@/lib/supabaseClient'
 import Countdown from './Countdown'
 import Poll from './Poll'
@@ -33,6 +34,15 @@ export default async function Home() {
 
   return (
     (<div className="flex min-h-screen flex-col items-center justify-center">
+      <Image
+        src="/gta6-background.jpg"
+        alt="Protagonistas de GTA 6 apoyados en un coche en Vice City"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        className="-z-10"
+      />
+      <div className="absolute inset-0 bg-black opacity-70 -z-10" />
       <StructuredData targetDate={targetDate} />
       <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
@@ -54,17 +64,14 @@ export default async function Home() {
               </ul>
             </nav>
             <h1
-              className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink"
+              className="text-6xl sm:text-7xl md:text-8xl font-bold mb-8 text-gta-pink"
               style={{ textShadow: '2px 2px 4px #000' }}
             >
-              GTA VI
+              GTA VI{' '}
+              <span className="text-white text-3xl sm:text-4xl md:text-5xl">
+                COUNTDOWN
+              </span>
             </h1>
-            <p
-              className="text-3xl sm:text-4xl md:text-5xl mb-8 text-white"
-              style={{ textShadow: '2px 2px 4px #000' }}
-            >
-              COUNTDOWN
-            </p>
             <Countdown targetDate={targetDate} />
             <Poll />
           </div>
