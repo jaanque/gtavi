@@ -42,7 +42,7 @@ export default async function Home() {
         quality={100}
         className="-z-10"
       />
-      <div className="absolute inset-0 bg-black opacity-70 -z-10" />
+      <div className="absolute inset-0 bg-black opacity-50 -z-10" />
       <StructuredData targetDate={targetDate} />
       <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
