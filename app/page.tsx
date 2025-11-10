@@ -4,6 +4,10 @@ import Poll from './Poll'
 import Community from './Community'
 import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/next"
+import StructuredData from './StructuredData'
+import News from './News'
+import Faq from './Faq'
+import Legacy from './Legacy'
 
 // Revalidate the page every hour
 export const revalidate = 3600
@@ -29,6 +33,7 @@ export default async function Home() {
 
   return (
     (<div className="flex min-h-screen flex-col items-center justify-center">
+      <StructuredData targetDate={targetDate} />
       <main className="flex flex-grow items-center justify-center w-full p-4">
         <div
           className="flex flex-col lg:flex-row items-center justify-around w-full space-y-8 lg:space-y-0 lg:space-x-8"
@@ -41,6 +46,13 @@ export default async function Home() {
           </div>
           {/* Center Content */}
           <div className="flex-grow order-1 lg:order-2 flex flex-col items-center text-center">
+            <nav className="mb-8">
+              <ul className="flex space-x-4 text-lg text-white">
+                <li><a href="#news" className="hover:text-gta-pink">News</a></li>
+                <li><a href="#faq" className="hover:text-gta-pink">FAQ</a></li>
+                <li><a href="#legacy" className="hover:text-gta-pink">Legacy</a></li>
+              </ul>
+            </nav>
             <h1
               className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-gta-pink"
               style={{ textShadow: '2px 2px 4px #000' }}
@@ -65,6 +77,9 @@ export default async function Home() {
         </div>
       </main>
       <Community />
+      <News />
+      <Faq />
+      <Legacy />
       <Script
         type="text/javascript"
         src="//pl28018814.effectivegatecpm.com/1a/60/82/1a60827c7a4f8d3fcbd3b4e7796666d7.js"

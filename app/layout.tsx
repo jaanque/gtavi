@@ -3,8 +3,29 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'GTA VI - Countdown',
-  description: 'GTA VI countdown timer',
+  title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+  description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, trailer analysis, and community discussions for Grand Theft Auto VI. Is the GTA 6 trailer out? When is GTA VI coming out? We have the answers.',
+  keywords: ['GTA 6', 'GTA VI', 'Grand Theft Auto 6', 'GTA 6 release date', 'GTA 6 countdown', 'GTA 6 trailer', 'GTA VI news', 'GTA 6 leaks', 'contador', 'Rockstar Games', 'GTA 6 map', 'gta vi countdown'],
+  openGraph: {
+    title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+    description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
+    type: 'website',
+    url: 'https://gta6countdown.com', // Placeholder URL
+    images: [
+      {
+        url: 'https://gta6countdown.com/og-image.jpg', // Placeholder image
+        width: 1200,
+        height: 630,
+        alt: 'GTA 6 Logo with Countdown Timer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+    description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
+    images: ['https://gta6countdown.com/twitter-image.jpg'], // Placeholder image
+  },
 }
 
 export default function RootLayout({
