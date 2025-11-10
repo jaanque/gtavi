@@ -36,6 +36,12 @@ export const metadata: Metadata = {
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
     images: [`${DOMAIN}/twitter-image.jpg`],
   },
+  icons: {
+    icon: "/globe.svg",
+    shortcut: "/globe.svg",
+    apple: "/globe.svg",
+  },
+  manifest: "/manifest.json",
 }
 
 export default function RootLayout({
@@ -46,9 +52,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KMH2MMRV');
+          `}
+        </Script>
         <Script async src="https://embed.reddit.com/widgets.js" charSet="UTF-8" />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KMH2MMRV"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         {children}
       </body>
     </html>
