@@ -2,18 +2,28 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 
+const DOMAIN = 'https://www.gta6drop.me';
+
 export const metadata: Metadata = {
-  title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+  metadataBase: new URL(DOMAIN),
+  title: 'GTA 6 Countdown | Is GTA 6 Out Yet? Official Release Date News & Leaks',
   description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, trailer analysis, and community discussions for Grand Theft Auto VI. Is the GTA 6 trailer out? When is GTA VI coming out? We have the answers.',
-  keywords: ['GTA 6', 'GTA VI', 'Grand Theft Auto 6', 'GTA 6 release date', 'GTA 6 countdown', 'GTA 6 trailer', 'GTA VI news', 'GTA 6 leaks', 'contador', 'Rockstar Games', 'GTA 6 map', 'gta vi countdown'],
+  keywords: ['GTA 6', 'GTA VI', 'Grand Theft Auto 6', 'GTA 6 release date', 'GTA 6 countdown', 'GTA 6 trailer', 'GTA VI news', 'GTA 6 leaks', 'contador', 'Rockstar Games', 'GTA 6 map', 'gta vi countdown', 'gta 6 release', 'gta 6 news', 'gta 6 leaks', 'gta 6 trailer date', 'gta 6 official', 'grand theft auto vi', 'when is gta 6 coming out'],
+  authors: [{ name: 'gta6drop.me' }],
+  creator: 'gta6drop.me',
+  publisher: 'gta6drop.me',
+  robots: 'index, follow',
+  alternates: {
+    canonical: DOMAIN,
+  },
   openGraph: {
-    title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+    title: 'GTA 6 Countdown | Is GTA 6 Out Yet? Official Release Date News & Leaks',
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
     type: 'website',
-    url: 'https://www.gta6drop.me/', // Placeholder URL
+    url: DOMAIN,
     images: [
       {
-        url: 'https://www.gta6drop.me/og-image.jpg', // Placeholder image
+        url: `${DOMAIN}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'GTA 6 Logo with Countdown Timer',
@@ -22,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GTA 6 Countdown | Official Grand Theft Auto VI Release Date News & Leaks',
+    title: 'GTA 6 Countdown | Is GTA 6 Out Yet? Official Release Date News & Leaks',
     description: 'The ultimate countdown to the official GTA 6 release date. Get the latest news, leaks, and community discussions for Grand Theft Auto VI.',
-    images: ['https://www.gta6drop.me/twitter-image.jpg'], // Placeholder image
+    images: [`${DOMAIN}/twitter-image.jpg`],
   },
 }
 
