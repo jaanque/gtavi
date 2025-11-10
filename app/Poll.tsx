@@ -7,6 +7,11 @@ export default function Poll() {
   const [voted, setVoted] = useState(false)
   const [results, setResults] = useState({ yes: 0, no: 0 })
   const [totalVotes, setTotalVotes] = useState(0)
+  const [animatedYesPercentage, setAnimatedYesPercentage] = useState(0)
+  const [animatedNoPercentage, setAnimatedNoPercentage] = useState(0)
+
+  const yesPercentage = totalVotes > 0 ? (results.yes / totalVotes) * 100 : 0
+  const noPercentage = totalVotes > 0 ? (results.no / totalVotes) * 100 : 0
 
   useEffect(() => {
     const fetchResults = async () => {
@@ -21,13 +26,19 @@ export default function Poll() {
     fetchResults()
   }, [voted])
 
+  useEffect(() => {
+    if (voted) {
+      setTimeout(() => {
+        setAnimatedYesPercentage(yesPercentage)
+        setAnimatedNoPercentage(noPercentage)
+      }, 100)
+    }
+  }, [voted, yesPercentage, noPercentage])
+
   const handleVote = async (vote: 'yes' | 'no') => {
     setVoted(true)
     await supabase.from('gta_vi_poll').insert([{ vote }])
   }
-
-  const yesPercentage = totalVotes > 0 ? (results.yes / totalVotes) * 100 : 0
-  const noPercentage = totalVotes > 0 ? (results.no / totalVotes) * 100 : 0
 
   return (
     <div className="text-white text-center mt-8 border-2 border-gta-pink p-4 rounded-lg">
@@ -53,8 +64,8 @@ export default function Poll() {
             <p>Yes: {yesPercentage.toFixed(2)}%</p>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <div
-                className="bg-gta-pink h-4 rounded-full transition-all duration-500 ease-in-out"
-                style={{ width: `${yesPercentage}%` }}
+                className="bg-gta-pink h-4 rounded-full transition-all duration-1000 ease-out"
+                style={{ width: `${animatedYesPercentage}%` }}
               ></div>
             </div>
           </div>
@@ -62,8 +73,8 @@ export default function Poll() {
             <p>No: {noPercentage.toFixed(2)}%</p>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <div
-                className="bg-gta-pink h-4 rounded-full transition-all duration-500 ease-in-out"
-                style={{ width: `${noPercentage}%` }}
+                className="bg-gta-pink h-4 rounded-full transition-all duration-1000 ease-out"
+                style={{ width: `${animatedNoPercentage}%` }}
               ></div>
             </div>
           </div>
