@@ -30,7 +30,7 @@ export default function Poll() {
   const noPercentage = totalVotes > 0 ? (results.no / totalVotes) * 100 : 0
 
   return (
-    <div className="text-white text-center mt-8">
+    <div className="text-white text-center mt-8 border-2 border-gta-pink p-4 rounded-lg">
       <h2 className="text-2xl mb-4">Are you excited for GTA VI?</h2>
       {!voted ? (
         <div className="flex justify-center gap-4">
@@ -42,7 +42,7 @@ export default function Poll() {
           </button>
           <button
             onClick={() => handleVote('no')}
-            className="bg-gray-500 text-white font-bold py-2 px-4 rounded"
+            className="bg-gta-pink text-white font-bold py-2 px-4 rounded"
           >
             No
           </button>
@@ -62,7 +62,7 @@ export default function Poll() {
             <p>No: {noPercentage.toFixed(2)}%</p>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <div
-                className="bg-gray-500 h-4 rounded-full"
+                className="bg-gta-pink h-4 rounded-full"
                 style={{ width: `${noPercentage}%` }}
               ></div>
             </div>
