@@ -36,13 +36,13 @@ export default function Poll() {
         <div className="flex justify-center gap-4">
           <button
             onClick={() => handleVote('yes')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white"
+            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80"
           >
             Yes
           </button>
           <button
             onClick={() => handleVote('no')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white"
+            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80"
           >
             No
           </button>
@@ -53,7 +53,7 @@ export default function Poll() {
             <p>Yes: {yesPercentage.toFixed(2)}%</p>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <div
-                className="bg-gta-pink h-4 rounded-full"
+                className="bg-gta-pink h-4 rounded-full transition-all duration-500 ease-in-out"
                 style={{ width: `${yesPercentage}%` }}
               ></div>
             </div>
@@ -62,7 +62,7 @@ export default function Poll() {
             <p>No: {noPercentage.toFixed(2)}%</p>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <div
-                className="bg-gta-pink h-4 rounded-full"
+                className="bg-gta-pink h-4 rounded-full transition-all duration-500 ease-in-out"
                 style={{ width: `${noPercentage}%` }}
               ></div>
             </div>
