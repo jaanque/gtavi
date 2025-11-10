@@ -79,6 +79,16 @@ export default async function Home() {
       <Community />
       <News />
       <Faq />
+      <div className="my-8 flex justify-center">
+        <Script id="ad-banner-options" strategy="afterInteractive">
+          {`atOptions = { 'key' : '82c08ce9d0c2b20878a114ac44199f26', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };`}
+        </Script>
+        <Script
+          id="ad-banner-src"
+          src="//www.highperformanceformat.com/82c08ce9d0c2b20878a114ac44199f26/invoke.js"
+          strategy="afterInteractive"
+        />
+      </div>
       <Legacy />
       <Script
         type="text/javascript"
