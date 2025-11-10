@@ -41,39 +41,39 @@ export default function Poll() {
   }
 
   return (
-    <div className="text-white text-center mt-8 border-2 border-gta-pink p-4 rounded-lg">
-      <h2 className="text-2xl mb-4">Are you excited for GTA VI?</h2>
+    <div className="text-white text-center mt-12 border-4 border-gta-pink p-8 rounded-lg">
+      <h2 className="text-4xl mb-6">Are you excited for GTA VI?</h2>
       {!voted ? (
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-6">
           <button
             onClick={() => handleVote('yes')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80"
+            className="bg-gta-pink text-white font-bold py-3 px-6 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80 text-lg"
           >
             Yes
           </button>
           <button
             onClick={() => handleVote('no')}
-            className="bg-gta-pink text-white font-bold py-2 px-4 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80"
+            className="bg-gta-pink text-white font-bold py-3 px-6 rounded border-2 border-white transition-opacity duration-300 hover:opacity-80 text-lg"
           >
             No
           </button>
         </div>
       ) : (
         <div>
-          <div className="mb-2">
-            <p>Yes: {yesPercentage.toFixed(2)}%</p>
-            <div className="w-full bg-gray-700 rounded-full h-4">
+          <div className="mb-4">
+            <p className="text-lg">Yes: {yesPercentage.toFixed(2)}%</p>
+            <div className="w-full bg-gray-700 rounded-full h-6">
               <div
-                className="bg-gta-pink h-4 rounded-full transition-all duration-1000 ease-out"
+                className="bg-gta-pink h-6 rounded-full transition-all duration-1000 ease-out"
                 style={{ width: `${animatedYesPercentage}%` }}
               ></div>
             </div>
           </div>
           <div>
-            <p>No: {noPercentage.toFixed(2)}%</p>
-            <div className="w-full bg-gray-700 rounded-full h-4">
+            <p className="text-lg">No: {noPercentage.toFixed(2)}%</p>
+            <div className="w-full bg-gray-700 rounded-full h-6">
               <div
-                className="bg-gta-pink h-4 rounded-full transition-all duration-1000 ease-out"
+                className="bg-gta-pink h-6 rounded-full transition-all duration-1000 ease-out"
                 style={{ width: `${animatedNoPercentage}%` }}
               ></div>
             </div>
